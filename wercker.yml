@@ -1,0 +1,77 @@
+# use the default golang container from Docker Hub
+box: golang
+
+build:
+  steps:
+    - script:
+      name: "setup"
+      code: |
+        echo "build"
+    - script:
+      name: step1
+      code: |
+        echo "Sleeping 1.."
+        sleep 1
+        echo "Done!"
+    - script:
+      name: step2
+      code: |
+        echo "Sleeping 2.."
+        sleep 5
+        echo "Done!"
+    - script:
+      name: step3
+      code: |
+        echo "Sleeping 3.."
+        sleep 3
+        echo "Done!"
+
+test:
+  steps:
+    - script:
+      name: "setup"
+      code: |
+        echo "test"
+    - script:
+      name: step1
+      code: |
+        echo "Sleeping 1.."
+        sleep 1
+        echo "Done!"
+    - script:
+      name: step2
+      code: |
+        echo "Sleeping 2.."
+        sleep 5
+        echo "Done!"
+    - script:
+      name: step3
+      code: |
+        echo "Sleeping 3.."
+        sleep 3
+        echo "Done!"
+
+deploy:
+  steps:
+    - script:
+      name: "setup"
+      code: |
+        echo "deploy"
+    - script:
+      name: step1
+      code: |
+        echo "Sleeping 1.."
+        sleep 1
+        echo "Done!"
+    - script:
+      name: step2
+      code: |
+        echo "Sleeping 2.."
+        sleep 5
+        echo "Done!"
+    - script:
+      name: step3
+      code: |
+        echo "Sleeping 3.."
+        sleep 3
+        echo "Done!"
